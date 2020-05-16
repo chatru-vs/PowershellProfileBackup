@@ -1,0 +1,111 @@
+We need to install 4 packages to install lamp stack
+1.Apache
+2.My SQL
+3.PHP
+4.PHP My admin
+
+
+STEP :0
+
+Before that we need to  update and install the new version of packages in Ubuntu 16.04
+  
+Use this command for Update 
+
+1.sudo apt-get update 
+   and
+2.sudo apt-get upgrade
+
+STEP :1
+
+So now we can install the Apache packages in ubuntu 16.04 by
+using this command:
+
+sudo apt-get install apache2
+
+
+we can verify through following command:
+
+sudo dpkg -l apache2
+
+
+Now open the browser and check wether apache 2 is working by entering http://localhost 
+
+STEP 2:
+
+ So now we can install  the php packages in ubuntu 16.04 by
+using the command:
+
+ sudo apt-get install libapache2-mod-php php
+
+we can verify through following command:
+
+sudo dpkg -l php
+
+now restart the apache2 service
+
+sudo /etc/init.d/apache2 restart
+
+So now we can test wether php is working fine for that we can create a file under Document Root of apache i.e. “/var/www/html” and then enter  to check php information.
+
+Using this command we create a file 
+
+sudo nano /var/www/html/file.php
+and enter this code in this file i.e 
+ 
+And check through by entering the “http://localhost/file.php” in your browser wether it is working or not 
+
+
+STEP 3:
+
+So now we can install  the mysql packages in ubuntu 16.04 by
+ 
+Using this command :
+
+sudo apt-get install mysql-server
+
+we can verify through following command:
+
+sudo dpkg -l mysql-server
+
+
+let’s check if mysql-server is working properly by creating a database
+  
+To login mysql-server as a user root:
+
+mysql -u root -p
+
+
+To create database
+
+mysql  create database usersdb;
+
+To check the database list or not
+
+mysql  show databases;
+
+
+
+STEP 4:
+
+ So now we can install  the phpmyadmin packages in ubuntu 16.04 by
+using the command:
+
+
+sudo apt-get install phpmyadmin
+
+Select apache2 and then press OK to proceed the installation process
+
+
+we can verify through following command:
+
+sudo dpkg -l phpmyadmin
+now restart the apache2 service
+
+sudo /etc/init.d/apache2 restart
+
+So now we can test wether php is working fine for that we can create a file under Document Root of apache i.e. “/var/www/html” and then enter  to check php information.
+
+Using this command we create a file 
+
+sudo nano /var/www/html/file.php
+ and enter this code in this file i.e 
